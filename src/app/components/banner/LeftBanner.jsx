@@ -29,12 +29,10 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide text-white">
-          I am a Full Stack Developer and a Problem Solver with a passion for
-          building web applications and learning new technologies. I am a 2024
-          graduate from IIIT Nagpur (Indian Institute of Information Technology,
-          Nagpur). with B.Tech in Electronics and Communication Engineering
-          Currently I am seeking a Full time role as a Frontend or Full Stack
-          Developer.
+          As a passionate problem solver, I thrive on building web applications
+          and mastering new technologies. Currently, I am seeking new
+          opportunities to apply my skills and drive innovation in a dynamic
+          development role.
         </p>
       </div>
       {/* Media */}

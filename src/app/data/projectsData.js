@@ -2,7 +2,7 @@ import projectOne from "../assets/circle.png";
 import projectTwo from "../assets/circle.png";
 import projectThree from "../assets/circle.png";
 
-const projectsData = [
+export const projectsData = [
   {
     title: "Nuts IQ Store",
     des: "NutIQ Store is an e-commerce web application created with Vite (React) utilizes Firebase as the backend and Tailwind for the CSS styling, providing a seamless shopping experience",
@@ -34,4 +34,46 @@ const projectsData = [
   },
 ];
 
-export default projectsData;
+//*************************** experienceData *******************************//
+
+export const experienceData = {
+  position: "MERN Stack Developer",
+  company: "Purezza Technologies",
+  timeline: "Jan 2024 - July 2024",
+  techStack: [
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Redux",
+    "Tailwind CSS",
+    "Postman",
+  ],
+  des: [
+    {
+      project: "Resume Portal",
+      description: [
+        "Developed UI pages according to Figma designs and integrated APIs into the frontend for smooth data flow"," Fixed responsiveness issues to ensure cross-device compatibility.",
+      ],
+    },
+    {
+      project: "Matrimony Site",
+      description: [
+        "Developed responsive frontend UI pages with features like searching and filtering for users"," Created backend RESTful APIs and integrated the PhonePe third-party payment system."," Tested APIs using Postman.",
+      ],
+    },
+    {
+      project: "Photo Frame ",
+      description: [
+        "Developed a responsive landing page with animations and built additional pages"," Integrated APIs from the frontend to support data interaction for custom photo frames.",
+      ],
+    },
+    {
+      project: "Quote and Invoice Generator",
+      description: [
+        "Led frontend development using Next.js, integrated APIs, and coordinated between frontend and backend teams"," Assigned tasks and ensured efficient collaboration to meet project deadlines.",
+      ],
+    },
+  ],
+};

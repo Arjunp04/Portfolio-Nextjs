@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div className=" max-w-screen-xxl mx-auto bg-black">
       <Banner />
-      <Projects />
       <Resume />
+      <Projects />
       <Contact />
     </div>
   );
