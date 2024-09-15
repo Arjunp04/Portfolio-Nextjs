@@ -8,7 +8,7 @@ import Resume from "./components/resume/Resume";
 
 const Home = () => {
   return (
-    <div className=" max-w-screen-xxl mx-auto bg-black">
+    <div className=" max-w-screen-xll mx-auto bg-black">
       <Banner />
       <Resume />
       <Projects />

@@ -1,6 +1,6 @@
-import projectOne from "../assets/circle.png";
-import projectTwo from "../assets/circle.png";
-import projectThree from "../assets/circle.png";
+import projectOne from "../assets/nutsiqMockup.png";
+import projectTwo from "../assets/blogifyhubMockup.png";
+import projectThree from "../assets/fancyfinds.png";
 
 export const projectsData = [
   {

@@ -6,9 +6,9 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 
 const Resume = () => {
-  const [educationData, setEducationData] = useState(true);
+  const [educationData, setEducationData] = useState(false);
   const [skillData, setSkillData] = useState(false);
-  const [experienceData, setExperienceData] = useState(false);
+  const [experienceData, setExperienceData] = useState(true);
 
   return (
     <section id="resume" className="w-full py-14 border-b-[1px] border-b-black">
@@ -19,17 +19,17 @@ const Resume = () => {
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <li
             onClick={() =>
-              setEducationData(true) &
+              setEducationData(false) &
               setSkillData(false) &
-              setExperienceData(false)
+              setExperienceData(true)
             }
             className={`${
-              educationData
+              experienceData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
             } resumeLi`}
           >
-            Education
+            Experience
           </li>
           <li
             onClick={() =>
@@ -45,23 +45,23 @@ const Resume = () => {
           </li>
           <li
             onClick={() =>
-              setEducationData(false) &
+              setEducationData(true) &
               setSkillData(false) &
-              setExperienceData(true)
+              setExperienceData(false)
             }
             className={`${
-              experienceData
+              educationData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
             } resumeLi`}
           >
-            Experience
+            Education
           </li>
         </ul>
       </div>
+      {experienceData && <Experience />}
       {educationData && <Education />}
       {skillData && <Skills />}
-      {experienceData && <Experience />}
     </section>
   );
 };

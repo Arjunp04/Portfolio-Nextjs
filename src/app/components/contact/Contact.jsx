@@ -1,51 +1,71 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Title from "../layouts/Title";
 import ContactLeft from "./ContactLeft";
 
 const Contact = () => {
-  const [username, setUsername] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    username: "",
+    phoneNumber: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
   // ========== Email Validation start here ==============
   const emailValidation = () => {
-    return String(email)
+    return String(formData.email)
       .toLocaleLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
   // ========== Email Validation end here ================
 
+  // Handle input changes and remove error message when typing
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    setErrMsg(""); // Remove error message when typing
+  };
+
+  // Handle form submission
   const handleSend = (e) => {
     e.preventDefault();
-    if (username === "") {
+
+    if (formData.username === "") {
       setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
+    } else if (formData.phoneNumber === "") {
       setErrMsg("Phone number is required!");
-    } else if (email === "") {
+    } else if (formData.email === "") {
       setErrMsg("Please give your Email!");
-    } else if (!emailValidation(email)) {
+    } else if (!emailValidation(formData.email)) {
       setErrMsg("Give a valid Email!");
-    } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
-    } else if (message === "") {
+    } else if (formData.subject === "") {
+      setErrMsg("Please give your Subject!");
+    } else if (formData.message === "") {
       setErrMsg("Message is required!");
     } else {
       setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+        `Thank you dear ${formData.username}, your message has been sent successfully!`
       );
       setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      setFormData({
+        username: "",
+        phoneNumber: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setSuccessMsg("");
+      }, 3000);
     }
   };
+
   return (
     <section
       id="contact"
@@ -58,7 +78,10 @@ const Contact = () => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between gap-y-10">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-4 lgl:gap-5">
+            <form
+              className="w-full flex flex-col gap-4 lgl:gap-5"
+              onSubmit={handleSend}
+            >
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -75,8 +98,9 @@ const Contact = () => {
                     Your name
                   </p>
                   <input
-                    onChange={(e) => setUsername(e.target.value)}
-                    value={username}
+                    name="username"
+                    onChange={handleChange}
+                    value={formData.username}
                     className={`${
                       errMsg === "Username is required!" &&
                       "outline-designColor"
@@ -89,8 +113,9 @@ const Contact = () => {
                     Phone Number
                   </p>
                   <input
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
+                    name="phoneNumber"
+                    onChange={handleChange}
+                    value={formData.phoneNumber}
                     className={`${
                       errMsg === "Phone number is required!" &&
                       "outline-designColor"
@@ -104,8 +129,9 @@ const Contact = () => {
                   Email
                 </p>
                 <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
+                  name="email"
+                  onChange={handleChange}
+                  value={formData.email}
                   className={`${
                     errMsg === "Please give your Email!" &&
                     "outline-designColor"
@@ -118,10 +144,11 @@ const Contact = () => {
                   Subject
                 </p>
                 <input
-                  onChange={(e) => setSubject(e.target.value)}
-                  value={subject}
+                  name="subject"
+                  onChange={handleChange}
+                  value={formData.subject}
                   className={`${
-                    errMsg === "Plese give your Subject!" &&
+                    errMsg === "Please give your Subject!" &&
                     "outline-designColor"
                   } contactInput`}
                   type="text"
@@ -132,8 +159,9 @@ const Contact = () => {
                   Message
                 </p>
                 <textarea
-                  onChange={(e) => setMessage(e.target.value)}
-                  value={message}
+                  name="message"
+                  onChange={handleChange}
+                  value={formData.message}
                   className={`${
                     errMsg === "Message is required!" && "outline-designColor"
                   } contactTextArea`}
@@ -143,22 +171,12 @@ const Contact = () => {
               </div>
               <div className="w-full">
                 <button
-                  onClick={handleSend}
+                  type="submit"
                   className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
                 >
                   Send Message
                 </button>
               </div>
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
             </form>
           </div>
         </div>
