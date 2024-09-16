@@ -43,7 +43,7 @@ const ContactLeft = () => {
             rel="noopener noreferrer"
             className="bannerIcon"
           >
-            <FaGithub />
+            <FaGithub size={27}/>
           </a>
           <a
             href="https://www.linkedin.com/in/arjun-prajapati-4ba91b285/"
@@ -51,7 +51,7 @@ const ContactLeft = () => {
             rel="noopener noreferrer"
             className="bannerIcon"
           >
-            <FaLinkedinIn />
+            <FaLinkedinIn size={27}/>
           </a>
         </div>
       </div>
