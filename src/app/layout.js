@@ -12,6 +12,9 @@ export const metadata = {
   keywords:
     "Arjun Prajapati, Full Stack Developer, MERN Stack, Next.js, Tailwind CSS, Web Developer Portfolio, JavaScript, React, Node.js",
   robots: "index, follow", // Allowing search engines to index the page
+  icons: {
+    icon: "/logo.jpeg", // Add favicon here
+  },
 };
 
 export default function RootLayout({ children }) {
