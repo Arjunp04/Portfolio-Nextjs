@@ -54,7 +54,6 @@ const Contact = () => {
        });
 
        const result = await res.json();
-      //  console.log("api response json :",result)
        if (res.status === 200) {
          setSuccessMsg(
            `Thank you dear ${formData.username}, your message has been sent successfully!`

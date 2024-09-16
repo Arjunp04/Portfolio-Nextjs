@@ -1,12 +1,14 @@
-import React from "react";
-import Banner from "./components/banner/Banner";
-import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
-import Resume from "./components/resume/Resume";
+import dynamic from "next/dynamic";
+
+// Dynamically import components
+const Banner = dynamic(() => import("./components/banner/Banner"));
+const Projects = dynamic(() => import("./components/projects/Projects"));
+const Contact = dynamic(() => import("./components/contact/Contact"));
+const Resume = dynamic(() => import("./components/resume/Resume"));
 
 const Home = () => {
   return (
-    <div className=" max-w-screen-xll mx-auto bg-black">
+    <div className="max-w-screen-xl mx-auto bg-black">
       <Banner />
       <Resume />
       <Projects />
