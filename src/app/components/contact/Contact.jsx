@@ -8,7 +8,6 @@ const Contact = () => {
     username: "",
     phoneNumber: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -31,40 +30,56 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSend = (e) => {
-    e.preventDefault();
+ const handleSend = async (e) => {
+   e.preventDefault();
 
-    if (formData.username === "") {
-      setErrMsg("Username is required!");
-    } else if (formData.phoneNumber === "") {
-      setErrMsg("Phone number is required!");
-    } else if (formData.email === "") {
-      setErrMsg("Please give your Email!");
-    } else if (!emailValidation(formData.email)) {
-      setErrMsg("Give a valid Email!");
-    } else if (formData.subject === "") {
-      setErrMsg("Please give your Subject!");
-    } else if (formData.message === "") {
-      setErrMsg("Message is required!");
-    } else {
-      setSuccessMsg(
-        `Thank you dear ${formData.username}, your message has been sent successfully!`
-      );
-      setErrMsg("");
-      setFormData({
-        username: "",
-        phoneNumber: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+   if (formData.username === "") {
+     setErrMsg("Username is required!");
+   } else if (formData.phoneNumber === "") {
+     setErrMsg("Phone number is required!");
+   } else if (formData.email === "") {
+     setErrMsg("Please give your Email!");
+   } else if (!emailValidation(formData.email)) {
+     setErrMsg("Give a valid Email!");
+   } else if (formData.message === "") {
+     setErrMsg("Message is required!");
+   } else {
+     try {
+       const res = await fetch("/api/send-email", {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify(formData),
+       });
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setSuccessMsg("");
-      }, 3000);
-    }
-  };
+       const result = await res.json();
+      //  console.log("api response json :",result)
+       if (res.status === 200) {
+         setSuccessMsg(
+           `Thank you dear ${formData.username}, your message has been sent successfully!`
+         );
+         setErrMsg("");
+         setFormData({
+           username: "",
+           phoneNumber: "",
+           email: "",
+           message: "",
+         });
+
+         // Hide success message after 3 seconds
+         setTimeout(() => {
+           setSuccessMsg("");
+         }, 3000);
+       } else {
+         setErrMsg(result.message || "Failed to send the message");
+       }
+     } catch (error) {
+       setErrMsg("An error occurred while sending the message.");
+     }
+   }
+ };
+
 
   return (
     <section
@@ -137,21 +152,6 @@ const Contact = () => {
                     "outline-designColor"
                   } contactInput`}
                   type="email"
-                />
-              </div>
-              <div className="flex flex-col gap-3">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Subject
-                </p>
-                <input
-                  name="subject"
-                  onChange={handleChange}
-                  value={formData.subject}
-                  className={`${
-                    errMsg === "Please give your Subject!" &&
-                    "outline-designColor"
-                  } contactInput`}
-                  type="text"
                 />
               </div>
               <div className="flex flex-col gap-3">

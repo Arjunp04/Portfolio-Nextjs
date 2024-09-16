@@ -29,7 +29,7 @@ const ContactLeft = () => {
           <FaPhoneAlt className="shrink-0 text-xl"/> <span className="text-lightText">+91 8879564472</span>
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2 text-wrap">
-          <MdMailOutline className="shrink-0 text-xl"/><span className="text-lightText">arjunprajapati4102001@gmail.com</span>
+          <MdMailOutline className="shrink-0 text-xl"/><span className="text-lightText">prajapatiarjun4147@gmail.com</span>
         </p>
       </div>
       <div className="flex flex-col gap-4">
