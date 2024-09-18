@@ -19,7 +19,7 @@ const Media = () => {
             rel="noopener noreferrer"
             className="bannerIcon"
           >
-            <FaGithub size={28}/>
+            <FaGithub size={28} />
           </a>
           <a
             href="https://www.linkedin.com/in/arjun-prajapati-4ba91b285/"
@@ -27,7 +27,7 @@ const Media = () => {
             rel="noopener noreferrer"
             className="bannerIcon"
           >
-            <FaLinkedinIn size={28}/>
+            <FaLinkedinIn size={28} />
           </a>
         </div>
       </div>
@@ -37,12 +37,12 @@ const Media = () => {
         </h2>
         <div className="flex gap-4 justify-center w-[105px]">
           <a
-            href="https://drive.google.com/file/d/1e8KzPUEeU-_OpEqsLLMM9jQflf8GojdD/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ISjMvpkY5dybLLVzICidFDxiKYMDcKgo/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="bannerIcon"
           >
-            <FaCloudDownloadAlt size={28}/>
+            <FaCloudDownloadAlt size={28} />
           </a>
         </div>
       </div>
