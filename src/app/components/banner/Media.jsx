@@ -37,7 +37,7 @@ const Media = () => {
         </h2>
         <div className="flex gap-4 justify-center w-[105px]">
           <a
-            href="https://drive.google.com/file/d/1ISjMvpkY5dybLLVzICidFDxiKYMDcKgo/view?usp=sharing"
+            href={process.env.NEXT_PUBLIC_RESUME_DRIVE_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="bannerIcon"
