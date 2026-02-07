@@ -27,12 +27,12 @@ const Education = () => {
             result="81.84 %"
             // des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
           />
-          {/* <ResumeCard
+          <ResumeCard
             title="School Education"
-            subTitle="ShantiNagar High School (2007 - 2017)"
+            subTitle="ShantiNagar High School"
             result="91.00 %"
             // des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
-          /> */}
+          />
         </div>
       </div>
     </motion.div>

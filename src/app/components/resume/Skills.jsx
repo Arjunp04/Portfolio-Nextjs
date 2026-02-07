@@ -8,6 +8,7 @@ import {
   FaNodeJs,
   FaGit,
   FaGithub,
+  FaBootstrap,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -42,6 +43,10 @@ const skills = [
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-sky-400 text-6xl xl:text-7xl" />,
+  },
+  {
+    name: "Bootstrap",
+    icon: <FaBootstrap className="text-purple-600 text-6xl xl:text-7xl" />,
   },
   {
     name: "Redux",
@@ -87,10 +92,17 @@ const Skills = () => {
       </div>
       <div className="grid grid-cols-3 gap-y-8 gap-x-1 md:grid-cols-4 mdl:grid-cols-5 lg:grid-cols-6 mt-8 md:mt-12 max-w-80 md:max-w-[450px] mdl:max-w-[600px] lg:max-w-[800px] mx-auto">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col items-center gap-2">
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 7 }}
+            className="flex flex-col items-center gap-2 cursor-pointer"
+          >
             {skill.icon}
-            <p className="text-sm text-gray-400">{skill.name}</p>
-          </div>
+            <p className="text-sm text-gray-400 group-hover:text-white">
+              {skill.name}
+            </p>
+          </motion.div>
         ))}
       </div>
     </motion.div>

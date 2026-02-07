@@ -39,7 +39,7 @@ export async function POST(req) {
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   } catch (error) {
     // Return error response
@@ -50,7 +50,7 @@ export async function POST(req) {
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   }
 }

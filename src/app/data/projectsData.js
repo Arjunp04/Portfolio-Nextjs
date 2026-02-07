@@ -37,49 +37,44 @@ export const projectsData = [
 
 //*************************** experienceData *******************************//
 
-export const experienceData = {
-  position: "MERN Stack Developer",
-  company: "Purezza Technologies",
-  timeline: "Jan 2024 - July 2024",
-  techStack: [
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Redux",
-    "Tailwind CSS",
-    "Postman",
-  ],
-  des: [
-    {
-      project: "Resume Portal",
-      description: [
-        "Developed UI pages according to Figma designs and integrated APIs into the frontend for smooth data flow.",
-        " Fixed responsiveness issues to ensure cross-device compatibility.",
-      ],
-    },
-    {
-      project: "Matrimony Site",
-      description: [
-        "Developed responsive frontend UI pages with features like searching and filtering for users.",
-        " Created backend RESTful APIs and integrated the PhonePe third-party payment system.",
-        " Tested APIs using Postman.",
-      ],
-    },
-    {
-      project: "Photo Frame ",
-      description: [
-        "Developed a responsive landing page with animations and built additional pages.",
-        " Integrated APIs from the frontend to support data interaction for custom photo frames.",
-      ],
-    },
-    {
-      project: "Quote and Invoice Generator",
-      description: [
-        "Led frontend development using Next.js, integrated APIs, and coordinated between frontend and backend teams.",
-        " Assigned tasks and ensured efficient collaboration to meet project deadlines.",
-      ],
-    },
-  ],
-};
+export const experienceData = [
+  {
+    position: "Frontend Developer",
+    company: "Isource Technologies",
+    location: "Dwarka, New Delhi, India",
+    timeline: "May 2025 - Present",
+    techStack: ["React.js", "Bootstrap", "Tailwind CSS", "Figma", "Axios"],
+    highlights: [
+      "Led frontend implementation of <hl>Assessment & Test Platform</hl> supporting test creation, participation, evaluation, and automated <hl>PDF reports</hl> for <hl>50+ users</hl> and enterprise clients.",
+      "Contributed to scaling core <hl>HRMS modules</hl> including <hl>Payroll & Salary</hl>, <hl>Communication</hl>, and <hl>Assessment</hl> powering daily operations.",
+      "Converted Figma designs into <hl>scalable, reusable React components</hl>, reducing duplication and improving development speed.",
+      "Established <hl>modular frontend architecture</hl> with <hl>lazy loading</hl> and <hl>code splitting</hl> for faster load times.",
+      "Built <hl>API-driven form flows</hl> handling validations, submissions, and dynamic data updates.",
+      "Collaborated with backend and QA teams to deliver <hl>client-specific onboarding workflows</hl> within <hl>2–3 week sprints</hl>.",
+    ],
+  },
+  {
+    position: "MERN Stack Developer Intern",
+    company: "Purezza Technologies",
+    location: "Ahmedabad, Gujarat, India",
+    timeline: "Jan 2024 - July 2024",
+    techStack: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "Tailwind CSS",
+      "Postman",
+    ],
+    highlights: [
+      "Built <hl>Resume Portal & Photo Frame</hl> web apps with responsive UI, animations, and API-driven data flows.",
+      "Developed <hl>Matrimony Site</hl> frontend featuring search, filter, and user-driven listings for <hl>100+ users</hl>.",
+      "Created and integrated <hl>RESTful APIs</hl> and implemented <hl>PhonePe payment gateway</hl> for transactions.",
+      "Led frontend work on <hl>Quote & Invoice Generator</hl> using Next.js, coordinating frontend-backend delivery.",
+    ],
+    
+  },
+];
+

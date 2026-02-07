@@ -1,12 +1,14 @@
 import React from "react";
 import LeftBanner from "./LeftBanner";
 import RightBanner from "./RightBanner";
+
 const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full pt-16 mdl:pt-20 lg:pt-10 pb-20 flex flex-col gap-10 xl:gap-0 lgl:flex-row items-center border-b-[1px] font-titleFont border-b-black px-10"
+      className="w-full flex flex-col-reverse lgl:flex-row items-center px-10 pt-16 pb-20 gap-10"
     >
+      {/* Mobile: RightBanner first, then LeftBanner */}
       <LeftBanner />
       <RightBanner />
     </section>
