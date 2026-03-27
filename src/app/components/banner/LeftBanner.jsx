@@ -28,7 +28,7 @@ const LeftBanner = () => {
 
       {/* Description */}
       <p className="mt-4 text-base md:text-lg text-gray-300 max-w-3xl lgl:max-w-2xl leading-7">
-        I have approximately 1.5 years of experience building{" "}
+        I have 1 year of experience building{" "}
         <span className="font-semibold text-white">
           responsive, interactive, and scalable frontend applications
         </span>{" "}
