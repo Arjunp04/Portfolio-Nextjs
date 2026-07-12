@@ -72,10 +72,10 @@ const skills = [
     name: "GitHub",
     icon: <FaGithub className="text-white text-6xl xl:text-7xl" />,
   },
-  {
-    name: "Firebase",
-    icon: <SiFirebase className="text-yellow-600 text-6xl xl:text-7xl" />,
-  },
+  // {
+  //   name: "Firebase",
+  //   icon: <SiFirebase className="text-yellow-600 text-6xl xl:text-7xl" />,
+  // },
 ];
 
 const Skills = () => {
