@@ -42,15 +42,15 @@ export const experienceData = [
     position: "Frontend Developer",
     company: "Isource Technologies",
     location: "Dwarka, New Delhi, India",
-    timeline: "May 2025 - Present",
+    timeline: "May 2025 - Feb 2026",
     techStack: ["React.js", "Bootstrap", "Tailwind CSS", "Figma", "Axios"],
     highlights: [
-      "Led frontend implementation of <hl>Assessment & Test Platform</hl> supporting test creation, participation, evaluation, and automated <hl>PDF reports</hl> for <hl>50+ users</hl> and enterprise clients.",
-      "Contributed to scaling core <hl>HRMS modules</hl> including <hl>Payroll & Salary</hl>, <hl>Communication</hl>, and <hl>Assessment</hl> powering daily operations.",
-      "Converted Figma designs into <hl>scalable, reusable React components</hl>, reducing duplication and improving development speed.",
-      "Established <hl>modular frontend architecture</hl> with <hl>lazy loading</hl> and <hl>code splitting</hl> for faster load times.",
-      "Built <hl>API-driven form flows</hl> handling validations, submissions, and dynamic data updates.",
-      "Collaborated with backend and QA teams to deliver <hl>client-specific onboarding workflows</hl> within <hl>2–3 week sprints</hl>.",
+      "Built the frontend for an <hl>in-house assessment platform</hl> — passcode login, timed tests, and an <hl>AI-integrated question module</hl> — replacing a paid tool.",
+      "Developed an <hl>admin dashboard</hl> to generate score reports on demand, cutting assessment-tool costs for the company.",
+      "Owned frontend for an <hl>HRMS Payroll module</hl>, handling salary setup and monthly generation linked to attendance approval.",
+      "Built a <hl>Smart Mail Manager</hl> with an AI-assisted editor and scheduled toggles, automating 200+ emails monthly.",
+      "Converted <hl>Figma designs</hl> into responsive interfaces for enterprise clients, using code-splitting and lazy loading for faster loads.",
+      "Fixed UI bugs and built reusable React components across multiple internal enterprise modules, improving UI consistency and reducing development effort.",
     ],
   },
   {
@@ -74,7 +74,5 @@ export const experienceData = [
       "Created and integrated <hl>RESTful APIs</hl> and implemented <hl>PhonePe payment gateway</hl> for transactions.",
       "Led frontend work on <hl>Quote & Invoice Generator</hl> using Next.js, coordinating frontend-backend delivery.",
     ],
-    
   },
 ];
-

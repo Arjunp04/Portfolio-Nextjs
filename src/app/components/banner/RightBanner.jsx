@@ -9,7 +9,7 @@ const RightBanner = () => {
       {/* Profile Image */}
       <div className="relative">
         <Image
-          className="w-52 h-52 lgl:w-[400px] lgl:h-[550px] xl:h-[500px] rounded-full lgl:rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-105 z-10"
+          className="w-52 h-52 lgl:w-[400px] lgl:h-[550px] xl:h-[500px] rounded-full lgl:rounded-2xl object-cover max-lgl:object-top shadow-2xl transition-transform duration-500 hover:scale-105 z-10"
           src={bannerImg}
           alt="Arjun Prajapati"
           priority
